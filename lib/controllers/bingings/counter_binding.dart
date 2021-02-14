@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:starter/controllers/app_controller.dart';
 import 'package:starter/controllers/counter_controller.dart';
 import 'package:starter/controller_services/counter_service.dart';
 
