@@ -1,6 +1,6 @@
 # Fluttere GetX starter by [Codeblock](https://codeblock.co.tz/)
 
-A starter kit for beginner learns with Getx pattern,  and GetStorage to architect a flutter project. This starter kit build an App Store app as a example.
+A starter kit for beginner learns with Getx pattern,  and GetStorage to architect a flutter project.
 
 ![Traslation](https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/locale.png?raw=true =300x)
 ![Counter](https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/counter.png?raw=true =300x)
