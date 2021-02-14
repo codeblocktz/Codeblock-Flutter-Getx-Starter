@@ -6,7 +6,6 @@ A starter kit for beginner learns with Getx pattern,  and GetStorage to architec
 ![Counter](https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/counter.png?raw=true =300x)
 
   
-
 ## Feature
 
 -   Getx with Model View,  Controller,  Controller-Service pattern
