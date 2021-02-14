@@ -8,6 +8,7 @@ class IncreaseCountButton extends GetWidget<CounterController> {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
+      heroTag: "increaseCountButton",
       onPressed: () => controller.increaseCount(),
       tooltip: 'Increment',
       child: Icon(Icons.add),

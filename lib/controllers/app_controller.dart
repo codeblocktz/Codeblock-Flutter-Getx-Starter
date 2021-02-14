@@ -6,6 +6,20 @@ import 'package:starter/widgets/language_options.dart';
 
 class AppController extends GetxController {
   final count = Count(number: 0).obs;
+  final isBusy = false.obs;
+
+  setIsBusy(bool value) {
+    isBusy(value);
+  }
+
+  initApp() {
+    setIsBusy(true);
+    Future.delayed(Duration(seconds: 3), () {
+      initLocale();
+      Get.offNamed('counter_page');
+    });
+    setIsBusy(false);
+  }
 
   initLocale() {
     GetStorage box = GetStorage();

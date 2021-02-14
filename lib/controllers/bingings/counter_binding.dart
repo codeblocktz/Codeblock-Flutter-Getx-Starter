@@ -8,7 +8,5 @@ class CounterBinding implements Bindings {
   void dependencies() {
     Get.lazyPut<CounterService>(() => CounterService(), fenix: true);
     Get.lazyPut<CounterController>(() => CounterController());
-
-    Get.lazyPut<AppController>(() => AppController());
   }
 }

@@ -8,6 +8,7 @@ class TranslateButton extends GetWidget<AppController> {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
+      heroTag: "translateButton",
       backgroundColor: Colors.red,
       onPressed: () => controller.changeLanguageModal(),
       tooltip: 'Change Language',

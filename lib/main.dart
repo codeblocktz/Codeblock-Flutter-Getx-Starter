@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:starter/controllers/bingings/counter_binding.dart';
+import 'package:starter/controllers/bingings/app_binding.dart';
 import 'package:starter/locale/app_translation.dart';
 import 'package:starter/pages/counter_page.dart';
+import 'package:starter/pages/splash_page.dart';
 
 void main() {
   GetStorage.init();
@@ -28,8 +30,13 @@ class MyApp extends StatelessWidget {
         getPages: [
           GetPage(
             name: '/',
+            page: () => SplashPage(),
+            binding: AppBinding(),
+          ),
+          GetPage(
+            name: 'counter_page',
             page: () => CounterPage(),
-            binding: CounterBinding(),
+            bindings: [CounterBinding(), AppBinding()],
           ),
         ]);
   }
