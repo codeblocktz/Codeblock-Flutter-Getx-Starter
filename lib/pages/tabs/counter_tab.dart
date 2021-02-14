@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:starter/controllers/counter_controller.dart';
 import 'package:starter/widgets/count_widget.dart';
 import 'package:starter/widgets/increase_count_button.dart';
 import 'package:starter/widgets/translate_button.dart';
+import 'package:get/get.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({Key key}) : super(key: key);
+class CounterTab extends StatelessWidget {
+  const CounterTab({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
