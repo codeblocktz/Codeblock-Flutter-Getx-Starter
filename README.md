@@ -2,6 +2,9 @@
 
 A starter kit for beginner learns with Getx pattern,  and GetStorage to architect a flutter project. This starter kit build an App Store app as a example.
 
+![Traslation](https://i.imgur.com/uGbQgud.png =300x)
+![Counter](https://i.imgur.com/SVN4tzE.png =300x)
+
   
 
 
