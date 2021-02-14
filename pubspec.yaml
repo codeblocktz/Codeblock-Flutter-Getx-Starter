@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
+  flag: ^3.0.0
   get: ^3.25.4
   get_storage: null
   graphql_flutter: ^4.0.1

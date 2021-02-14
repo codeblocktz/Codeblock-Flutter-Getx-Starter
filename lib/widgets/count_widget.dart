@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:starter/controllers/counter_controller.dart';
 
-class CountWidget extends StatelessWidget {
-  final int count;
-  const CountWidget({Key key, @required this.count})
+class CountWidget extends GetWidget<CounterController> {
+  const CountWidget({Key key})
       : super(
           key: key,
         );
@@ -10,10 +11,11 @@ class CountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
-        '$count',
+        child: Obx(
+      () => Text(
+        '${controller.count.number}',
         style: Theme.of(context).textTheme.headline4,
       ),
-    );
+    ));
   }
 }

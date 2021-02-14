@@ -1,33 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:starter/controller/counter_controller.dart';
+import 'package:starter/controllers/counter_controller.dart';
 import 'package:starter/widgets/count_widget.dart';
+import 'package:starter/widgets/increase_count_button.dart';
+import 'package:starter/widgets/translate_button.dart';
 
-class CounterPage extends GetWidget<CounterController> {
+class CounterPage extends StatelessWidget {
   const CounterPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('GetX Counter Example'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Obx(() => CountWidget(count: controller.count.number)),
-          ],
+        appBar: AppBar(
+          title: Text('counter_page_title'.tr),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => controller.increaseCount(),
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'counter_text'.tr,
+              ),
+              CountWidget(),
+            ],
+          ),
+        ),
+        floatingActionButton: Stack(
+          children: [
+            Positioned(
+              bottom: 80.0,
+              right: 10.0,
+              child: TranslateButton(),
+            ),
+            Positioned(
+              bottom: 10.0,
+              right: 10.0,
+              child: IncreaseCountButton(),
+            ),
+          ],
+        ) // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }
