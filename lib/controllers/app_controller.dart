@@ -8,6 +8,12 @@ class AppController extends GetxController {
   final count = Count(number: 0).obs;
   final isBusy = false.obs;
 
+  final tabIndex = 0.obs;
+
+  setTabIndex(int value) {
+    tabIndex(value);
+  }
+
   setIsBusy(bool value) {
     isBusy(value);
   }
@@ -16,7 +22,7 @@ class AppController extends GetxController {
     setIsBusy(true);
     Future.delayed(Duration(seconds: 3), () {
       initLocale();
-      Get.offNamed('counter_page');
+      Get.offNamed('bottom_tabs_page');
     });
     setIsBusy(false);
   }

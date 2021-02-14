@@ -4,8 +4,8 @@ import 'package:get_storage/get_storage.dart';
 import 'package:starter/controllers/bingings/counter_binding.dart';
 import 'package:starter/controllers/bingings/app_binding.dart';
 import 'package:starter/locale/app_translation.dart';
-import 'package:starter/pages/counter_page.dart';
-import 'package:starter/pages/splash_page.dart';
+import 'package:starter/pages/static/splash_page.dart';
+import 'package:starter/pages/static/bottom_tabs_page.dart';
 
 void main() {
   GetStorage.init();
@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
             binding: AppBinding(),
           ),
           GetPage(
-            name: 'counter_page',
-            page: () => CounterPage(),
+            name: 'bottom_tabs_page',
+            page: () => BottomTabsPage(),
             bindings: [CounterBinding(), AppBinding()],
           ),
         ]);
