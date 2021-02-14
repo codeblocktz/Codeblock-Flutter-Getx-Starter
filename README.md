@@ -7,7 +7,6 @@ A starter kit for beginner learns with Getx pattern,  and GetStorage to architec
 
   
 
-
 ## Feature
 
 -   Getx with Model View,  Controller,  Controller-Service pattern
