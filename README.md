@@ -2,26 +2,23 @@
 
 A starter kit for beginner learns with Getx pattern,  and GetStorage to architect a flutter project. This starter kit build an App Store app as a example.
 
-![Traslation](https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/locale.png?raw=true =300x)
-![Counter](https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/counter.png?raw=true =300x)
+![Traslation](<https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/locale.png?raw=true> =300x)
+![Counter](<https://github.com/codeblock-dev/Codeblock-Flutter-Getx-Starter/blob/master/assets/images/counter.png?raw=true> =300x)
 
-  
 ## Feature
 
--   Getx with Model View,  Controller,  Controller-Service pattern
--   Navigate pages by  [Getx Navigation](https://github.com/jonataslaw/getx#route-management)
--   Local cache by using  [GetStorage](https://github.com/jonataslaw/get_storage)
--   Restful api call by using  [GraphQL](https://github.com/zino-app/graphql-flutter)
--   Localization by using  [GetxTranslation](https://github.com/jonataslaw/getx#internationalization) 
--   Update each widget item instead of re-rendering whole list view when data set has changed on a widget item
+- Getx with Model View,  Controller,  Controller-Service pattern
+- Navigate pages by  [Getx Navigation](https://github.com/jonataslaw/getx#route-management)
+- Local cache by using  [GetStorage](https://github.com/jonataslaw/get_storage)
+- Restful api call by using  [GraphQL](https://github.com/zino-app/graphql-flutter)
+- Localization by using  [GetxTranslation](https://github.com/jonataslaw/getx#internationalization)
+- Update each widget item instead of re-rendering whole list view when data set has changed on a widget item
   
-
-
 ## Communities channels
 
 GetX has a highly active and helpful community. If you have questions, or would like any assistance regarding the use of this framework, please join our community channels, your question will be answered more quickly, and it will be the most suitable place. This repository is exclusive for opening issues, and requesting resources, but feel free to be part of GetX Community.
 
-| **Getx Slack**                                                                                                                   | **Getx Discord**                                                                                                                 | **Getx Telegram**    | **TDC Community Slack**     | **TDC Community Telegram**                                                                                               | 
+| **Getx Slack**                                                                                                                   | **Getx Discord**                                                                                                                 | **Getx Telegram**    | **TDC Community Slack**     | **TDC Community Telegram**                                                                                               |
 | :-------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------
 | [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx) | [![Discord Shield](https://img.shields.io/discord/722900883784073290.svg?logo=discord)](https://discord.com/invite/9Hpt99N) | [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/joinchat/PhdbJRmsZNpAqSLJL6bH7g) | [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://tz-devs.slack.com/archives/C01EA1ER2FM) | [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/tanzaniadeveloperscommunity)
 
