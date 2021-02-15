@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:starter/models/count.dart';
-import 'package:starter/widgets/language_options.dart';
+import 'package:starter/widgets/modals/language_options.dart';
 
 class AppController extends GetxController {
   final count = Count(number: 0).obs;
