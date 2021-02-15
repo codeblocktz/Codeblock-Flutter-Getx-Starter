@@ -25,7 +25,9 @@ dependencies:
     sdk: flutter
   bottom_navy_bar: ^5.6.0
   cupertino_icons: ^1.0.0
+  eva_icons_flutter: ^2.0.1
   flag: ^3.0.0
+  flutter_form_builder: ^4.2.0
   get: ^3.25.4
   get_storage: null
   graphql_flutter: ^4.0.1

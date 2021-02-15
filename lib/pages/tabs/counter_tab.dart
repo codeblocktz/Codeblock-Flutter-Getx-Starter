@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:starter/widgets/count_widget.dart';
-import 'package:starter/widgets/increase_count_button.dart';
-import 'package:starter/widgets/translate_button.dart';
+import 'package:starter/widgets/components/count_widget.dart';
+import 'package:starter/widgets/components/increase_count_button.dart';
+import 'package:starter/widgets/components/translate_button.dart';
 import 'package:get/get.dart';
 
 class CounterTab extends StatelessWidget {
