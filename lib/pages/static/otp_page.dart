@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:starter/widgets/forms/signin_form.dart';
+import 'package:starter/widgets/forms/otp_form.dart';
 
-class SigninPage extends StatelessWidget {
-  const SigninPage({Key key}) : super(key: key);
+class OtpPage extends StatelessWidget {
+  const OtpPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,19 +16,22 @@ class SigninPage extends StatelessWidget {
             ),
           ),
           Container(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Sign in',
+                      'Enter reset code',
                       style: Theme.of(context)
                           .primaryTextTheme
                           .headline5
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
+                    Text(
+                      'The Reset code  was sent on the number  that end with 99',
+                    ),
                   ])),
-          Container(padding: EdgeInsets.all(30), child: SigninForm())
+          Container(padding: EdgeInsets.all(30), child: OtpForm())
         ],
       ),
     );

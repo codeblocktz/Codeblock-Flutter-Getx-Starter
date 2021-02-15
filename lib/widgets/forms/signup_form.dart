@@ -2,10 +2,10 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
-import 'package:starter/controllers/signin_controller.dart';
+import 'package:starter/controllers/signup_controller.dart';
 
-class SigninForm extends GetWidget<SigninController> {
-  const SigninForm({Key key}) : super(key: key);
+class SignupForm extends GetWidget<SignupController> {
+  const SignupForm({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,43 @@ class SigninForm extends GetWidget<SigninController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Container(
+                child: Wrap(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  child: Row(
+                    children: [
+                      Icon(
+                        EvaIcons.personOutline,
+                        size: 18,
+                      ),
+                      Text('Full name'),
+                    ],
+                  ),
+                ),
+                FormBuilderTextField(
+                  name: 'fullName',
+                  decoration: InputDecoration(
+                    floatingLabelBehavior: FloatingLabelBehavior.never,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    filled: true,
+                    labelText: 'Full name',
+                  ),
+                  validator: FormBuilderValidators.compose([
+                    FormBuilderValidators.required(context),
+                    FormBuilderValidators.max(context, 70),
+                  ]),
+                ),
+              ],
+            )),
+            SizedBox(
+              height: 20,
+            ),
             Container(
                 child: Wrap(
               children: [
@@ -93,20 +130,14 @@ class SigninForm extends GetWidget<SigninController> {
             ),
             Container(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                      onTap: () => controller.navigateToResetPassword(),
+                      onTap: () => controller.navigateBack(),
                       child: Text(
-                        'Forgot Password?',
+                        'Get back to login?',
                         style: TextStyle(color: Theme.of(context).primaryColor),
                       )),
-                  InkWell(
-                      onTap: () => controller.navigateToSignUp(),
-                      child: Text(
-                        'Create an account.',
-                        style: TextStyle(color: Theme.of(context).primaryColor),
-                      ))
                 ],
               ),
             ),
@@ -123,13 +154,13 @@ class SigninForm extends GetWidget<SigninController> {
                   padding: EdgeInsets.symmetric(vertical: 18),
                   color: Theme.of(context).accentColor,
                   child: Text(
-                    "Signin",
+                    "Signup",
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
                     controller.formKey.currentState.save();
                     if (controller.formKey.currentState.validate()) {
-                      controller.navigateToTabPage();
+                      print(controller.formKey.currentState.value);
                     } else {
                       print("validation failed");
                     }

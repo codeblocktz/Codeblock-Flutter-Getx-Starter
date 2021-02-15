@@ -22,7 +22,7 @@ class AppController extends GetxController {
     setIsBusy(true);
     Future.delayed(Duration(seconds: 3), () {
       initLocale();
-      Get.offNamed('bottom_tabs_page');
+      Get.offNamed('signin');
     });
     setIsBusy(false);
   }
