@@ -1,11 +1,10 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
-import 'package:starter/controllers/signin_controller.dart';
+import 'package:starter/controllers/otp_controller.dart';
 
-class SigninForm extends GetWidget<SigninController> {
-  const SigninForm({Key? key}) : super(key: key);
+class OtpForm extends GetWidget<OtpController> {
+  const OtpForm({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +21,12 @@ class SigninForm extends GetWidget<SigninController> {
                   margin: EdgeInsets.only(bottom: 10),
                   child: Row(
                     children: [
-                      Icon(
-                        EvaIcons.personOutline,
-                        size: 18,
-                      ),
-                      Text('Username'),
+                      Text('Reset code'),
                     ],
                   ),
                 ),
                 FormBuilderTextField(
-                  name: 'username',
+                  name: 'code',
                   decoration: InputDecoration(
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     border: OutlineInputBorder(
@@ -40,7 +35,7 @@ class SigninForm extends GetWidget<SigninController> {
                       ),
                     ),
                     filled: true,
-                    labelText: 'Username',
+                    labelText: 'Reset Code',
                   ),
                   validator: FormBuilderValidators.compose([
                     FormBuilderValidators.required(context),
@@ -53,60 +48,15 @@ class SigninForm extends GetWidget<SigninController> {
               height: 20,
             ),
             Container(
-              child: Wrap(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          EvaIcons.lockOutline,
-                          size: 18,
-                        ),
-                        Text('Password'),
-                      ],
-                    ),
-                  ),
-                  FormBuilderTextField(
-                    obscureText: true,
-                    name: 'password',
-                    decoration: InputDecoration(
-                      floatingLabelBehavior: FloatingLabelBehavior.never,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10.0),
-                        ),
-                      ),
-                      filled: true,
-                      labelText: 'Password',
-                    ),
-                    validator: FormBuilderValidators.compose([
-                      FormBuilderValidators.required(context),
-                      FormBuilderValidators.max(context, 70),
-                    ]),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                      onTap: () => controller.navigateToResetPassword(),
+                      onTap: () => controller.navigateBack(),
                       child: Text(
-                        'Forgot Password?',
+                        'Get back to login?',
                         style: TextStyle(color: Theme.of(context).primaryColor),
                       )),
-                  InkWell(
-                      onTap: () => controller.navigateToSignUp(),
-                      child: Text(
-                        'Create an account.',
-                        style: TextStyle(color: Theme.of(context).primaryColor),
-                      ))
                 ],
               ),
             ),
@@ -123,13 +73,13 @@ class SigninForm extends GetWidget<SigninController> {
                   padding: EdgeInsets.symmetric(vertical: 18),
                   color: Theme.of(context).accentColor,
                   child: Text(
-                    "Signin",
+                    "Send me reset code",
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
                     controller.formKey.currentState.save();
                     if (controller.formKey.currentState.validate()) {
-                      controller.navigateToTabPage();
+                      controller.navigateToChangePassword();
                     } else {
                       print("validation failed");
                     }

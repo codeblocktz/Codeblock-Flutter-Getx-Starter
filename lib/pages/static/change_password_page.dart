@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:starter/widgets/forms/signin_form.dart';
+import 'package:starter/widgets/forms/change_password_form.dart';
 
-class SigninPage extends StatelessWidget {
-  const SigninPage({Key? key}) : super(key: key);
+class ChangePasswordPage extends StatelessWidget {
+  const ChangePasswordPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +21,14 @@ class SigninPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Sign in',
+                      'Change password',
                       style: Theme.of(context)
                           .primaryTextTheme
                           .headline5
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
                   ])),
-          Container(padding: EdgeInsets.all(30), child: SigninForm())
+          Container(padding: EdgeInsets.all(30), child: ChangePasswordForm())
         ],
       ),
     );
