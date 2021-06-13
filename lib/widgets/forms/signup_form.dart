@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/signup_controller.dart';
 
 class SignupForm extends GetWidget<SignupController> {
-  const SignupForm({Key key}) : super(key: key);
+  const SignupForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -158,9 +158,9 @@ class SignupForm extends GetWidget<SignupController> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    controller.formKey.currentState.save();
-                    if (controller.formKey.currentState.validate()) {
-                      print(controller.formKey.currentState.value);
+                    controller.formKey.currentState!.save();
+                    if (controller.formKey.currentState!.validate()) {
+                      print(controller.formKey.currentState!.value);
                     } else {
                       print("validation failed");
                     }

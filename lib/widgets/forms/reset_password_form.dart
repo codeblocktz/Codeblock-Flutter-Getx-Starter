@@ -5,7 +5,7 @@ import 'package:starter/controllers/reset_password_controller.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 class ResetPasswordForm extends GetWidget<ResetPasswordController> {
-  const ResetPasswordForm({Key key}) : super(key: key);
+  const ResetPasswordForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +82,8 @@ class ResetPasswordForm extends GetWidget<ResetPasswordController> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    controller.formKey.currentState.save();
-                    if (controller.formKey.currentState.validate()) {
+                    controller.formKey.currentState!.save();
+                    if (controller.formKey.currentState!.validate()) {
                       controller.navigateToOtp();
                     } else {
                       print("validation failed");

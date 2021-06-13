@@ -24,7 +24,7 @@ class SigninPage extends StatelessWidget {
                       'Sign in',
                       style: Theme.of(context)
                           .primaryTextTheme
-                          .headline5
+                          .headline5!
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
                   ])),
