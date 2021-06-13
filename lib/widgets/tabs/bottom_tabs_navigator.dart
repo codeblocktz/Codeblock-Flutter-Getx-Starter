@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/app_controller.dart';
 
 class BottomTabsNavigator extends GetWidget<AppController> {
-  const BottomTabsNavigator({Key key}) : super(key: key);
+  const BottomTabsNavigator({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

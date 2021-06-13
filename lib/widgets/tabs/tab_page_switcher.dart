@@ -7,7 +7,7 @@ import 'package:starter/pages/tabs/settings_tab.dart';
 
 class TabPageSwitcher extends GetWidget<AppController> {
   final List<Widget> _tabPages = [CounterTab(), HomeTab(), SettingsTab()];
-  TabPageSwitcher({Key key}) : super(key: key);
+  TabPageSwitcher({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

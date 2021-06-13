@@ -7,7 +7,7 @@ class Api {
 
   Future<ValueNotifier<GraphQLClient>> graphQLClient() async {
     final box = GetStorage();
-    String _token = box.read("token");
+    String? _token = box.read("token");
     await initHiveForFlutter();
 
     final HttpLink _httpLink = HttpLink(

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/signin_controller.dart';
 
 class SigninForm extends GetWidget<SigninController> {
-  const SigninForm({Key key}) : super(key: key);
+  const SigninForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

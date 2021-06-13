@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/app_controller.dart';
 
 class TranslateButton extends GetWidget<AppController> {
-  const TranslateButton({Key key}) : super(key: key);
+  const TranslateButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
