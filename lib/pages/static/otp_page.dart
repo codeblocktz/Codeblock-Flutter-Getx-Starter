@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:starter/widgets/forms/otp_form.dart';
 
 class OtpPage extends StatelessWidget {
-  const OtpPage({Key key}) : super(key: key);
+  const OtpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class OtpPage extends StatelessWidget {
                       'Enter reset code',
                       style: Theme.of(context)
                           .primaryTextTheme
-                          .headline5
+                          .headline5!
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
                     Text(

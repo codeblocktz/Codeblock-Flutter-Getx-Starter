@@ -127,8 +127,8 @@ class SigninForm extends GetWidget<SigninController> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    controller.formKey.currentState.save();
-                    if (controller.formKey.currentState.validate()) {
+                    controller.formKey.currentState!.save();
+                    if (controller.formKey.currentState!.validate()) {
                       controller.navigateToTabPage();
                     } else {
                       print("validation failed");

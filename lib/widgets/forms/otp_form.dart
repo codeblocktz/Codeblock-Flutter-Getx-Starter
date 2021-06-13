@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/otp_controller.dart';
 
 class OtpForm extends GetWidget<OtpController> {
-  const OtpForm({Key key}) : super(key: key);
+  const OtpForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,8 +77,8 @@ class OtpForm extends GetWidget<OtpController> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    controller.formKey.currentState.save();
-                    if (controller.formKey.currentState.validate()) {
+                    controller.formKey.currentState!.save();
+                    if (controller.formKey.currentState!.validate()) {
                       controller.navigateToChangePassword();
                     } else {
                       print("validation failed");

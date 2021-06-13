@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:starter/widgets/forms/signup_form.dart';
 
 class SignupPage extends StatelessWidget {
-  const SignupPage({Key key}) : super(key: key);
+  const SignupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SignupPage extends StatelessWidget {
                       'Sign up',
                       style: Theme.of(context)
                           .primaryTextTheme
-                          .headline5
+                          .headline5!
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
                   ])),

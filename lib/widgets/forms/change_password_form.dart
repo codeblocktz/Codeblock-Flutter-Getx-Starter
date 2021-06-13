@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/change_password_controller.dart';
 
 class ChangePasswordForm extends GetWidget<ChangePasswordController> {
-  const ChangePasswordForm({Key key}) : super(key: key);
+  const ChangePasswordForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -123,8 +123,8 @@ class ChangePasswordForm extends GetWidget<ChangePasswordController> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    controller.formKey.currentState.save();
-                    if (controller.formKey.currentState.validate()) {
+                    controller.formKey.currentState!.save();
+                    if (controller.formKey.currentState!.validate()) {
                       controller.navigateToSignin();
                     } else {
                       print("validation failed");
