@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:flag/flag.dart';
 
 class LanguageOptionsWidget extends GetWidget<AppController> {
-  const LanguageOptionsWidget({Key key}) : super(key: key);
+  const LanguageOptionsWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

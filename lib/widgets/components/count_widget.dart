@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:starter/controllers/counter_controller.dart';
 
 class CountWidget extends GetWidget<CounterController> {
-  const CountWidget({Key key})
+  const CountWidget({Key? key})
       : super(
           key: key,
         );

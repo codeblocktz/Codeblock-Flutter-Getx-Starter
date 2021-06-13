@@ -5,7 +5,7 @@ import 'package:starter/widgets/components/translate_button.dart';
 import 'package:get/get.dart';
 
 class CounterTab extends StatelessWidget {
-  const CounterTab({Key key}) : super(key: key);
+  const CounterTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

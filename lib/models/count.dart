@@ -3,11 +3,11 @@ import 'dart:convert';
 class Count {
   final int number;
   Count({
-    this.number,
+    required this.number,
   });
 
   Count copyWith({
-    int number,
+    int? number,
   }) {
     return Count(
       number: number ?? this.number,
@@ -21,8 +21,6 @@ class Count {
   }
 
   factory Count.fromMap(Map<String, dynamic> map) {
-    if (map == null) return null;
-
     return Count(
       number: map['number']?.toInt(),
     );
@@ -36,10 +34,10 @@ class Count {
   String toString() => 'Count(number: $number)';
 
   @override
-  bool operator ==(Object o) {
-    if (identical(this, o)) return true;
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
 
-    return o is Count && o.number == number;
+    return other is Count && other.number == number;
   }
 
   @override
