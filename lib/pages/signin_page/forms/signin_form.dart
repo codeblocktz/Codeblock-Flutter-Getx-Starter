@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:starter/pages/signin_page/controllers/signin_controller.dart';
+import 'package:starter/shared/widgets/general/block_button.dart';
 
 class SigninForm extends GetWidget<SigninController> {
   const SigninForm({Key? key}) : super(key: key);
@@ -15,78 +16,41 @@ class SigninForm extends GetWidget<SigninController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-                child: Wrap(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        EvaIcons.personOutline,
-                        size: 18,
-                      ),
-                      Text('Username'),
-                    ],
-                  ),
+            FormBuilderTextField(
+              name: 'username',
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  EvaIcons.personOutline,
+                  size: 18,
                 ),
-                FormBuilderTextField(
-                  name: 'username',
-                  decoration: InputDecoration(
-                    floatingLabelBehavior: FloatingLabelBehavior.never,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    filled: true,
-                    labelText: 'Username',
-                  ),
-                  validator: FormBuilderValidators.compose([
-                    FormBuilderValidators.required(context),
-                    FormBuilderValidators.max(context, 70),
-                  ]),
-                ),
-              ],
-            )),
+                filled: true,
+                isDense: true,
+                labelText: 'Username',
+              ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
+            ),
             SizedBox(
               height: 20,
             ),
-            Container(
-              child: Wrap(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          EvaIcons.lockOutline,
-                          size: 18,
-                        ),
-                        Text('Password'),
-                      ],
-                    ),
-                  ),
-                  FormBuilderTextField(
-                    obscureText: true,
-                    name: 'password',
-                    decoration: InputDecoration(
-                      floatingLabelBehavior: FloatingLabelBehavior.never,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10.0),
-                        ),
-                      ),
-                      filled: true,
-                      labelText: 'Password',
-                    ),
-                    validator: FormBuilderValidators.compose([
-                      FormBuilderValidators.required(context),
-                      FormBuilderValidators.max(context, 70),
-                    ]),
-                  )
-                ],
+            FormBuilderTextField(
+              obscureText: true,
+              name: 'password',
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  EvaIcons.lockOutline,
+                  size: 18,
+                ),
+                filled: true,
+                isDense: true,
+                labelText: 'Password',
               ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
             ),
             SizedBox(
               height: 20,
@@ -116,16 +80,8 @@ class SigninForm extends GetWidget<SigninController> {
             Container(
                 child: Row(children: <Widget>[
               Expanded(
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 18),
-                  color: Theme.of(context).accentColor,
-                  child: Text(
-                    "Signin",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                child: BlockButton(
+                  buttonText: "Signin",
                   onPressed: () {
                     controller.formKey.currentState!.save();
                     if (controller.formKey.currentState!.validate()) {
