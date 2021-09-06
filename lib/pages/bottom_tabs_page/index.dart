@@ -1,4 +1,3 @@
-import 'package:get/get.dart';
 import 'package:starter/shared/widgets/tabs/bottom_tabs_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:starter/shared/widgets/tabs/tab_page_switcher.dart';
