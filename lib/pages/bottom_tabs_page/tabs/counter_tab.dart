@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:starter/pages/bottom_tabs_page/widgets/count_widget.dart';
 import 'package:starter/pages/bottom_tabs_page/widgets/increase_count_button.dart';
+import 'package:starter/pages/bottom_tabs_page/widgets/theme_switch_button.dart';
 import 'package:starter/shared/widgets/general/translate_button.dart';
 import 'package:get/get.dart';
 
@@ -26,6 +27,11 @@ class CounterTab extends StatelessWidget {
         ),
         floatingActionButton: Stack(
           children: [
+            Positioned(
+              bottom: 150.0,
+              right: 10.0,
+              child: ThemeSwitchButton(),
+            ),
             Positioned(
               bottom: 80.0,
               right: 10.0,
