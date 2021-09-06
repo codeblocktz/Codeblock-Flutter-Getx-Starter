@@ -16,115 +16,60 @@ class SignupForm extends GetWidget<SignupController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-                child: Wrap(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        EvaIcons.personOutline,
-                        size: 18,
-                      ),
-                      Text('Full name'),
-                    ],
-                  ),
+            FormBuilderTextField(
+              name: 'fullName',
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  EvaIcons.personOutline,
+                  size: 18,
                 ),
-                FormBuilderTextField(
-                  name: 'fullName',
-                  decoration: InputDecoration(
-                    floatingLabelBehavior: FloatingLabelBehavior.never,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    filled: true,
-                    labelText: 'Full name',
-                  ),
-                  validator: FormBuilderValidators.compose([
-                    FormBuilderValidators.required(context),
-                    FormBuilderValidators.max(context, 70),
-                  ]),
-                ),
-              ],
-            )),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-                child: Wrap(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        EvaIcons.personOutline,
-                        size: 18,
-                      ),
-                      Text('Username'),
-                    ],
-                  ),
-                ),
-                FormBuilderTextField(
-                  name: 'username',
-                  decoration: InputDecoration(
-                    floatingLabelBehavior: FloatingLabelBehavior.never,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    filled: true,
-                    labelText: 'Username',
-                  ),
-                  validator: FormBuilderValidators.compose([
-                    FormBuilderValidators.required(context),
-                    FormBuilderValidators.max(context, 70),
-                  ]),
-                ),
-              ],
-            )),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              child: Wrap(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          EvaIcons.lockOutline,
-                          size: 18,
-                        ),
-                        Text('Password'),
-                      ],
-                    ),
-                  ),
-                  FormBuilderTextField(
-                    obscureText: true,
-                    name: 'password',
-                    decoration: InputDecoration(
-                      floatingLabelBehavior: FloatingLabelBehavior.never,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10.0),
-                        ),
-                      ),
-                      filled: true,
-                      labelText: 'Password',
-                    ),
-                    validator: FormBuilderValidators.compose([
-                      FormBuilderValidators.required(context),
-                      FormBuilderValidators.max(context, 70),
-                    ]),
-                  )
-                ],
+                filled: true,
+                isDense: true,
+                labelText: 'Full name',
               ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FormBuilderTextField(
+              name: 'username',
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  EvaIcons.personOutline,
+                  size: 18,
+                ),
+                filled: true,
+                isDense: true,
+                labelText: 'Username',
+              ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FormBuilderTextField(
+              obscureText: true,
+              name: 'password',
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  EvaIcons.lockOutline,
+                  size: 18,
+                ),
+                filled: true,
+                isDense: true,
+                labelText: 'Password',
+              ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
             ),
             SizedBox(
               height: 20,

@@ -55,41 +55,23 @@ class ChangePasswordForm extends GetWidget<ChangePasswordController> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              child: Wrap(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    child: Row(
-                      children: [
-                        Icon(
-                          EvaIcons.lockOutline,
-                          size: 18,
-                        ),
-                        Text('Repeat Password'),
-                      ],
-                    ),
+            FormBuilderTextField(
+              obscureText: true,
+              name: 'repeatPassword',
+              decoration: InputDecoration(
+                floatingLabelBehavior: FloatingLabelBehavior.never,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10.0),
                   ),
-                  FormBuilderTextField(
-                    obscureText: true,
-                    name: 'repeatPassword',
-                    decoration: InputDecoration(
-                      floatingLabelBehavior: FloatingLabelBehavior.never,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10.0),
-                        ),
-                      ),
-                      filled: true,
-                      labelText: 'Repeat Password',
-                    ),
-                    validator: FormBuilderValidators.compose([
-                      FormBuilderValidators.required(context),
-                      FormBuilderValidators.max(context, 70),
-                    ]),
-                  )
-                ],
+                ),
+                filled: true,
+                labelText: 'Repeat Password',
               ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
             ),
             SizedBox(
               height: 20,

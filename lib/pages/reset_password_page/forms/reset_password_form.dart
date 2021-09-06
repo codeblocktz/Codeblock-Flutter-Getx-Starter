@@ -16,40 +16,18 @@ class ResetPasswordForm extends GetWidget<ResetPasswordController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-                child: Wrap(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        EvaIcons.personOutline,
-                        size: 18,
-                      ),
-                      Text('Username'),
-                    ],
-                  ),
-                ),
-                FormBuilderTextField(
-                  name: 'username',
-                  decoration: InputDecoration(
-                    floatingLabelBehavior: FloatingLabelBehavior.never,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    filled: true,
-                    labelText: 'Username',
-                  ),
-                  validator: FormBuilderValidators.compose([
-                    FormBuilderValidators.required(context),
-                    FormBuilderValidators.max(context, 70),
-                  ]),
-                ),
-              ],
-            )),
+            FormBuilderTextField(
+              name: 'username',
+              decoration: InputDecoration(
+                filled: true,
+                isDense: true,
+                labelText: 'Username',
+              ),
+              validator: FormBuilderValidators.compose([
+                FormBuilderValidators.required(context),
+                FormBuilderValidators.max(context, 70),
+              ]),
+            ),
             SizedBox(
               height: 20,
             ),
@@ -72,9 +50,9 @@ class ResetPasswordForm extends GetWidget<ResetPasswordController> {
             Container(
                 child: Row(children: <Widget>[
               Expanded(
-                child:BlockButton(
-                buttonText: "Send me a reset code",
-                onPressed: () {
+                child: BlockButton(
+                  buttonText: "Send me a reset code",
+                  onPressed: () {
                     controller.formKey.currentState!.save();
                     if (controller.formKey.currentState!.validate()) {
                       controller.navigateToOtp();
