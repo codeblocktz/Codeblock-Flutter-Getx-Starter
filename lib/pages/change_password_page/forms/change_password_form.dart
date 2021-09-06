@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:starter/pages/change_password_page/controllers/change_password_controller.dart';
+import 'package:starter/shared/widgets/general/block_button.dart';
 
 class ChangePasswordForm extends GetWidget<ChangePasswordController> {
   const ChangePasswordForm({Key? key}) : super(key: key);
@@ -112,16 +113,8 @@ class ChangePasswordForm extends GetWidget<ChangePasswordController> {
             Container(
                 child: Row(children: <Widget>[
               Expanded(
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 18),
-                  color: Theme.of(context).accentColor,
-                  child: Text(
-                    "Change Password",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                child: BlockButton(
+                  buttonText: "Change password",
                   onPressed: () {
                     controller.formKey.currentState!.save();
                     if (controller.formKey.currentState!.validate()) {

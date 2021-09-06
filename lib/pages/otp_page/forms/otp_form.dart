@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:starter/pages/otp_page/controllers/otp_controller.dart';
+import 'package:starter/shared/widgets/general/block_button.dart';
 
 class OtpForm extends GetWidget<OtpController> {
   const OtpForm({Key? key}) : super(key: key);
@@ -66,17 +67,9 @@ class OtpForm extends GetWidget<OtpController> {
             Container(
                 child: Row(children: <Widget>[
               Expanded(
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 18),
-                  color: Theme.of(context).accentColor,
-                  child: Text(
-                    "Send me reset code",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onPressed: () {
+                child: BlockButton(
+                buttonText: "Send OTP",
+                onPressed: () {
                     controller.formKey.currentState!.save();
                     if (controller.formKey.currentState!.validate()) {
                       controller.navigateToChangePassword();

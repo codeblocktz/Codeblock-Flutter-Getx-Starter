@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:starter/pages/signin_page/controllers/signin_controller.dart';
+import 'package:starter/shared/widgets/general/block_button.dart';
 
 class SigninForm extends GetWidget<SigninController> {
   const SigninForm({Key? key}) : super(key: key);
@@ -116,16 +117,8 @@ class SigninForm extends GetWidget<SigninController> {
             Container(
                 child: Row(children: <Widget>[
               Expanded(
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 18),
-                  color: Theme.of(context).accentColor,
-                  child: Text(
-                    "Signin",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                child: BlockButton(
+                  buttonText: "Signin",
                   onPressed: () {
                     controller.formKey.currentState!.save();
                     if (controller.formKey.currentState!.validate()) {

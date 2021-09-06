@@ -3,6 +3,7 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:starter/pages/reset_password_page/controllers/reset_password_controller.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:starter/shared/widgets/general/block_button.dart';
 
 class ResetPasswordForm extends GetWidget<ResetPasswordController> {
   const ResetPasswordForm({Key? key}) : super(key: key);
@@ -71,17 +72,9 @@ class ResetPasswordForm extends GetWidget<ResetPasswordController> {
             Container(
                 child: Row(children: <Widget>[
               Expanded(
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 18),
-                  color: Theme.of(context).accentColor,
-                  child: Text(
-                    "Send me reset code",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onPressed: () {
+                child:BlockButton(
+                buttonText: "Send me a reset code",
+                onPressed: () {
                     controller.formKey.currentState!.save();
                     if (controller.formKey.currentState!.validate()) {
                       controller.navigateToOtp();
