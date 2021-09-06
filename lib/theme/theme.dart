@@ -8,9 +8,8 @@ class Themes {
       indicatorColor: HexColor("#009D4D"),
       accentColor: HexColor("#009D4D"),
       appBarTheme: AppBarTheme(
-          brightness: Brightness.light,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.transparent),
+        brightness: Brightness.light,
+      ),
       backgroundColor: HexColor("#FFFFFF"),
       // accentColor: Color.fromARGB(1, 0, 39, 72),
       scaffoldBackgroundColor: HexColor("#FFFFFF"),
@@ -29,9 +28,8 @@ class Themes {
       primaryColor: HexColor("#009D4D"),
       accentColor: HexColor("#009D4D"),
       appBarTheme: AppBarTheme(
-          brightness: Brightness.dark,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.transparent),
+        brightness: Brightness.dark,
+      ),
       backgroundColor: HexColor("#021623"),
       // accentColor: Color.fromARGB(1, 0, 39, 72),
       scaffoldBackgroundColor: HexColor("#021623"),
