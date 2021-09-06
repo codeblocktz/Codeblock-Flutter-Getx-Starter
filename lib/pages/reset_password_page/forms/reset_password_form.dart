@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:starter/pages/reset_password_page/controllers/reset_password_controller.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:starter/shared/widgets/general/block_button.dart';
 
 class ResetPasswordForm extends GetWidget<ResetPasswordController> {
