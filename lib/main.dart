@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:starter/locale/app_translation.dart';
 import 'package:starter/router/router.dart';
+import 'package:starter/theme/theme.dart';
+import 'package:starter/theme/themeService.dart';
 
 void main() {
   GetStorage.init();
@@ -19,10 +21,9 @@ class MyApp extends StatelessWidget {
         locale: Get.deviceLocale,
         debugShowCheckedModeBanner: false,
         title: 'GetX Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        theme: Themes().lightTheme,
+        darkTheme: Themes().darkTheme,
+        themeMode: ThemeService().theme,
         initialRoute: '/',
         getPages: AppRouter.routes);
   }
